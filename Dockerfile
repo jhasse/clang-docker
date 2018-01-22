@@ -1,6 +1,6 @@
 FROM fedora:27
 
-RUN dnf install -y clang waf-python3 gcc-gfortran boost-devel lapack-devel
+RUN dnf install -y clang gcc-gfortran boost-devel lapack-devel && dnf clean all
 
 ENV CC clang
 ENV CXX clang++
